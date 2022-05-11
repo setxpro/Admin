@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Main from './Components/Main';
 
-function App() {
+import { DefaultTheme, ThemeProvider } from 'styled-components';
+import light from './Styles/theme/light';
+import dark from './Styles/theme/dark';
+import usePersistedState from './utils/usePersistedState';
+import { NavProvider } from './Context/NavContext';
+
+const App: React.FC = () => {
+
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
+  const toggleTheme = () => setTheme(theme.title === 'light' ? dark : light);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <NavProvider>
+          <Main toggleTheme={toggleTheme}/>
+      </NavProvider>
+    </ThemeProvider>
+
   );
 }
 
