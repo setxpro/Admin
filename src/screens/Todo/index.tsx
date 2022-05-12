@@ -8,6 +8,7 @@ import { Container, Content } from './styles';
 const Todo: React.FC = () => {
 
     const [task, setTask] = useState<Item[]>([]);
+    
 
     function handleAddTask(taskName: string) {
         let newTask = [...task];
@@ -37,9 +38,10 @@ const Todo: React.FC = () => {
                     key={index}
                     item={task}
                     handleDeleteTask={handleDeleteTask}
+                    
                 />
             ))}
-            
+
          </Content>
 
       </Container>

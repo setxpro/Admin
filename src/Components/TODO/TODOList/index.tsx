@@ -14,7 +14,7 @@ interface Props {
     handleDeleteTask: (id:number) => void;
 }
 
-const TODOList: React.FC<Props> = ({item, handleDeleteTask}) => {
+const TODOList: React.FC<Props> = ({ item, handleDeleteTask }) => {
 
     const [isChecked, setIsChecked] = useState(item.done);
 

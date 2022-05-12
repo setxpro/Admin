@@ -7,3 +7,9 @@ export type Item = {
 export type PropAddTodo = {
     onEnter: (taskName: string) => void; 
 }
+
+export type ChatListProps = {
+    chatId: number;
+    title: string;
+    avatar: string;
+}

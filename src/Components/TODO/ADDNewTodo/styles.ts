@@ -12,7 +12,7 @@ export const Container = styled.div`
         > span {
             margin-right: 5px;
             font-size: 1rem;
-            color: #fff;
+            color: ${props => props.theme.colors.text};
         }
 
         input {
@@ -20,7 +20,7 @@ export const Container = styled.div`
             border: 0;
             background: transparent;
             outline: 0;
-            color: #fff;
+            color: ${props => props.theme.colors.text};
             font-size: 1rem;
             flex: 1;
     }

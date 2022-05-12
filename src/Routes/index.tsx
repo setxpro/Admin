@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import SingleMessage from '../Components/Email/SingleMessage';
+import Chat from '../screens/Chat';
 import Analytics from '../screens/Dashboard/Analytics';
 import Ecommerce from '../screens/Dashboard/Ecommerce';
 import Email from '../screens/Email';
@@ -14,6 +15,7 @@ const SidebarRoutes: React.FC = () => {
           <Route path="/email" element={<Email/>}/>
           <Route path="/email/:id" element={<SingleMessage/>}/>
           <Route path="/todo" element={<Todo/>}/>
+          <Route path="/chat" element={<Chat/>}/>
           
       </Routes>
   );
