@@ -8,6 +8,7 @@ declare module 'styled-components' {
             sidebar: string;
             navBar: string;
             text: string;
+            border: string;
         }
     }
 }

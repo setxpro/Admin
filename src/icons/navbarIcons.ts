@@ -17,22 +17,22 @@ import { FaBars } from 'react-icons/fa';
 
 export const NavMailIcon = styled(AiOutlineMail)`
     color: ${props => props.theme.colors.text};
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;    
 `;
 export const NavTodoIcon = styled(RiTodoLine)`
     color: ${props => props.theme.colors.text};
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
 `;
 export const NavChatIcon = styled(BsChatLeftDots)`
     color: ${props => props.theme.colors.text};
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
 `;
 export const NavCalendarIcon = styled(AiOutlineCalendar)`
     color: ${props => props.theme.colors.text};
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
 `;
 export const LightIcon = styled(MdOutlineLightMode)`

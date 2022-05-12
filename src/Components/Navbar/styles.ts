@@ -9,6 +9,12 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+
+    box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.2);
 `;
 
 export const LeftSide = styled.div`
