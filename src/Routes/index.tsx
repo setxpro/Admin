@@ -4,6 +4,7 @@ import SingleMessage from '../Components/Email/SingleMessage';
 import Analytics from '../screens/Dashboard/Analytics';
 import Ecommerce from '../screens/Dashboard/Ecommerce';
 import Email from '../screens/Email';
+import Todo from '../screens/Todo';
 
 const SidebarRoutes: React.FC = () => {
   return (
@@ -12,6 +13,8 @@ const SidebarRoutes: React.FC = () => {
           <Route path="/ecommerce" element={<Ecommerce/>}/>
           <Route path="/email" element={<Email/>}/>
           <Route path="/email/:id" element={<SingleMessage/>}/>
+          <Route path="/todo" element={<Todo/>}/>
+          
       </Routes>
   );
 }

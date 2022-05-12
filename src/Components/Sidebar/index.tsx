@@ -22,6 +22,10 @@ const Sidebar: React.FC = () => {
                 <Dashboard/>
                 <p>Apps & Pages</p>
                 <div className='content'>
+                  <Link to="/email">
+                    <MailIcon/>
+                    <li>Email</li>
+                  </Link>
                   <Link to="/todo">
                     <TodoIcon/>
                     <li>Todo</li>
@@ -29,10 +33,6 @@ const Sidebar: React.FC = () => {
                   <Link to="/chat">
                     <ChatIcon/>
                     <li>Chat</li>
-                  </Link>
-                  <Link to="/email">
-                    <MailIcon/>
-                    <li>Email</li>
                   </Link>
                   <Link to="/pages">
                     <PageIcon/>
