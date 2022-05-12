@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Messages from '../../Components/Email';
 import { EmailDb } from '../../Components/Email/emailItemsDb';
+import { CheckedIcon } from '../../Components/Email/styles';
 
 import * as C from './styles';
 
@@ -9,6 +10,9 @@ const Email: React.FC = () => {
 
     const [inputValue, setInputValue] = useState('');
     const inputFilter = EmailDb.filter(message => message.name.startsWith(inputValue));
+
+    const [checkedAll, setCheckedAll] = useState(true);
+    const toggleCheckedAll = () => setCheckedAll(!checkedAll);
 
   return (
       <C.Container>
@@ -38,7 +42,7 @@ const Email: React.FC = () => {
                         />
                 </C.InputArea>
                 <C.SelectArea>
-                        <input type="checkbox" name='checkbox'/>
+                        <button onClick={toggleCheckedAll}>{checkedAll && <CheckedIcon/>}</button>
                         <label>Select All</label>
                 </C.SelectArea>
                 </C.ContentSearch>
@@ -52,6 +56,7 @@ const Email: React.FC = () => {
                                 subject={message.subject}
                                 avatar={message.avatar}
                                 date={message.date}
+                                checkedAll={checkedAll}
                             />
                     ))}
                     

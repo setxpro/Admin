@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import * as C from './styles';
 
@@ -9,9 +9,17 @@ interface MessageProps {
     subject: string;
     avatar: string;
     date: string;
+    checkedAll: boolean;
 }
 
-const Messages: React.FC<MessageProps> = ({ id, name, description, subject, avatar, date }) => {
+const Messages: React.FC<MessageProps> = ({ id, name, description, subject, avatar, date, checkedAll }) => {
+
+    const [checked, setChecked] = useState(false);
+    
+    function handleCheckboxChange(){
+        setChecked(!checked);
+    }
+
   return (
     <C.Container>
         <C.ContentTop  to={`/email/${id}`}>
@@ -25,7 +33,7 @@ const Messages: React.FC<MessageProps> = ({ id, name, description, subject, avat
             <p>{date}</p>
         </C.ContentTop>
         <C.ContentBottom>
-            <input type="checkbox" name="checkbox"/>
+            <button onClick={handleCheckboxChange}>{(checked && <C.CheckedIcon/>) || (checkedAll && <C.CheckedIcon/>)}</button>
             <p>{subject}</p>
         </C.ContentBottom>
     </C.Container>

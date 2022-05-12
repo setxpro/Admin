@@ -9,6 +9,7 @@ declare module 'styled-components' {
             navBar: string;
             text: string;
             border: string;
+            check: string;
         }
     }
 }

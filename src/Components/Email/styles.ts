@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+import { BsCheck2 } from 'react-icons/bs';
+
 export const Container = styled.div`
     
     height: 100%;
@@ -54,6 +56,7 @@ export const ContentBottom = styled.div`
    align-items: center;
    gap: 1rem;
    margin-top: 1rem;
+   position: relative;
 
    p {
        width: 800px;
@@ -62,4 +65,17 @@ export const ContentBottom = styled.div`
        white-space: nowrap;
        color: #444;
    }
+
+    button {
+        width: 15px;
+        height: 15px;
+        background: transparent;
+        border: 1px solid ${props => props.theme.colors.border};
+        cursor: pointer;
+    }
+`;
+
+export const CheckedIcon = styled(BsCheck2)`
+    font-size: 15px;
+    color: ${props => props.theme.colors.check};
 `;

@@ -6,5 +6,6 @@ export default {
         navBar: '#283046',
         text: '#D0D2D6',
         border: 'rgba(255,255,255,0.2)',
+        check: '#0bd5f7',
     }
 }

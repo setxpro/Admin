@@ -25,7 +25,6 @@ const SingleMessage: React.FC = () => {
     const [message, setMessage] = useState<Props>();
 
 
-
     useEffect(() => {
         const getMessage = EmailDb.filter(message => message.id === id)[0];
         setMessage({
@@ -36,8 +35,8 @@ const SingleMessage: React.FC = () => {
             description: getMessage.description,
             avatar: getMessage.avatar,
             date: getMessage.date
-        })
-    }, [])
+        });
+    }, []);
 
     function goBack() {
         navigate('/email');

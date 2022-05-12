@@ -80,6 +80,18 @@ export const SelectArea = styled.div`
     align-items: center;
     gap: 1rem;
     font-size: 1.3rem;
+
+    button {
+        width: 1.3rem;
+        height: 16px;
+        background: transparent;
+        border: 1px solid ${props => props.theme.colors.border};
+        cursor: pointer;
+    }
+
+    label {
+        color: ${props => props.theme.colors.text};
+    }
 `;
 
 export const ContentMessage = styled.div`
