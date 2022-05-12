@@ -3,7 +3,7 @@ import React from 'react';
 import * as C from './styles';
 
 interface MessageProps {
-    id: number;
+    id: string | number;
     name: string;
     description: string;
     subject: string;
@@ -14,7 +14,7 @@ interface MessageProps {
 const Messages: React.FC<MessageProps> = ({ id, name, description, subject, avatar, date }) => {
   return (
     <C.Container>
-        <C.ContentTop  to={`/${id}`}>
+        <C.ContentTop  to={`/email/${id}`}>
             <C.ContentImage>
                 <img src={avatar} alt="avatar"/>
             </C.ContentImage>

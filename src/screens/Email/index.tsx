@@ -25,7 +25,6 @@ const Email: React.FC = () => {
                     <Link to="">Trash</Link>
                 </ul>
           </C.ContentSidebarActions>
-          
             <C.ContentRight>
                 <C.ContentSearch>
                 <C.InputArea>
@@ -58,7 +57,6 @@ const Email: React.FC = () => {
                     
                 </C.ContentMessage>
             </C.ContentRight>
-
       </C.Container>
   );
 }
