@@ -17,14 +17,19 @@ const Chat: React.FC = () => {
         chatId: 1,
         avatar: '',
         title: ''
+    });
 
+    const [user, setUser] = useState({
+        id: 123,
+        avatar: 'https://github.com/setxpro.png',
+        name: 'Patrick Anjos'
     });
 
   return (
       <C.Container>
         <C.SidebarChat>
             <header>
-                <img src="https://github.com/setxpro.png" alt="avatar"/>
+                <img src={user.avatar} alt="avatar"/>
                 <div>
                     <C.Donut/> 
                     <C.NewChat/> 
@@ -53,8 +58,8 @@ const Chat: React.FC = () => {
         </C.SidebarChat>
 
         <C.ContentChatArea>
-            {activeChat !== undefined && <ChatWindow/>}
-            {activeChat === undefined && <ChatIntro/>}
+            {activeChat.title !== '' && <ChatWindow user={user}/>} {/** Alter title to chatId */}
+            {activeChat.title === '' && <ChatIntro/>} {/** Alter title to chatId */}
         </C.ContentChatArea>
       </C.Container>
   );

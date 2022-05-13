@@ -1,8 +1,6 @@
 import React from 'react';
-import { ChatListProps } from '../../../Types';
 
 import * as C from './styles';
-
 interface Props {
     setActiveChat: () => void;
     active: boolean | number;
